@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+    <div class="table-container">
+        <div class="topo">
+            <h2>Produtos</h2>
+            <a href="/inserir" class="btnCadastrar"><img src="../img/cadastrar.png" alt="icon-cadastrar" width="40" height="40"></a>
+        </div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th class="funcionalidades">Config</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="lis : ${lista}">
+                    <td th:text="${lis.id}"></td>
+                    <td th:text="${lis.nome}"></td>
+                    <td th:text="${lis.descricao}"></td>
+                    <td class="icons">
+                        <a th:href="@{'/alterar?id=' + ${lis.id}}" class="btnAlterar"><img src="../img/alterar.png" alt="icon-alterar" width="25" height="25"></a>
+                        <a th:href="@{'/excluir?id=' + ${lis.id}}" class="btnExcluir"><img src="../img/excluir.png" alt="icon-excluir" width="25" height="25"></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

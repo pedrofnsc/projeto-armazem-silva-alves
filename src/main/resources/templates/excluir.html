@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excluir</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <container>
+        <form th:action="@{/apagar}" method="POST">
+            <h2 class="titulo">Deseja excluir produto?</h2>
+                <div class="resposta">
+                    <div class="sim">
+                        <input type="radio" name="radio" id="btnSim" value="sim"/> SIM! <br />
+                    </div>
+
+                    <div class="nao">
+                        <input type="radio" name="radio" id="btnNao" value="nao"/> NÃO! <br />
+                    </div>
+                </div>
+                <input type="hidden" id="produto-id" name="id" th:value="${produto.id}" />
+                <p><input type="submit" value="Apagar" id="btnApagar"/></p>
+        </form>
+    </container>
+    <script src="../js/jquery.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
