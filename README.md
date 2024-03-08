@@ -2,6 +2,7 @@
 
 Status do Projeto
   - Concluído
+
 Tecnologias Aplicadas
   - Java
   - HTML/CSS (w/ Bootstrap)
