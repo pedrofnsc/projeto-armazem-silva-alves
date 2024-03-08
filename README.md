@@ -1,8 +1,7 @@
 <h1> Projeto Armazém Silva Alves </h1>
 
 Status do Projeto
-  - Em desenvolvimento
-
+  - Concluído
 Tecnologias Aplicadas
   - Java
   - HTML/CSS (w/ Bootstrap)
