@@ -136,9 +136,9 @@ container .titulo {
     border: none;
     cursor: pointer;
     padding: 10px;
-    display: block; /* Alterado para block */
+    display: block;
     text-align: center;
-    margin: 15px auto 10px auto; /* Alterado para auto */
+    margin: 15px auto 10px auto;
 }
 
 
